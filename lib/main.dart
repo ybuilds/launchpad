@@ -5,349 +5,106 @@ void main() {
   runApp(LaunchPad());
 }
 
-class LaunchPad extends StatefulWidget {
+class LaunchPad extends StatelessWidget {
   const LaunchPad({super.key});
-  @override
-  State<LaunchPad> createState() => _LaunchPad();
-}
 
-class _LaunchPad extends State<LaunchPad> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Launch Pad",
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black12,
-          centerTitle: true,
-          title: Text("Launch Pad")
-        ),
-        body: Container(
-          decoration: BoxDecoration(
-            color: Colors.black12,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+        backgroundColor: Colors.black,
+        appBar: AppBar(title: Text("Launch Pad", style: TextStyle(color: Colors.white),), backgroundColor: Colors.black,),
+        body: Center(
+          child: Wrap(
+            spacing: 3.0,
+            runSpacing: 3.0,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/1.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/2.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.amberAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/3.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/4.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.lightGreenAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/5.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/6.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.amberAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/7.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/8.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.lightGreenAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/9.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/10.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.amberAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/11.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/12.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.lightGreenAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/13.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/14.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.amberAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/15.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/16.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.lightGreenAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/17.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/18.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.amberAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/19.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/20.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.lightGreenAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/21.mp3")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/22.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.amberAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/23.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/24.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.lightGreenAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/25.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/26.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.amberAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/27.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(1.0)
-                    ),
-                    onPressed: () => AudioPlayer().play(AssetSource("audio/28.wav")),
-                    child: Container(
-                      height: 90.0, width: 90.0,
-                      decoration: BoxDecoration(color: Colors.lightGreenAccent, borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.black)),
-                    ),
-                  ),
-                ],
-              ),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/1.mp3"),
+              Pad(Color(0xffc40050), Color(0xffff2525), "audio/2.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/3.mp3"),
+              Pad(Color(0xffA23AB7), Color(0xffE246FC), "audio/4.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/5.mp3"),
+              Pad(Color(0xffc40050), Color(0xffff2525), "audio/6.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/7.mp3"),
+              Pad(Color(0xffA23AB7), Color(0xffE246FC), "audio/8.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/9.mp3"),
+              Pad(Color(0xffc40050), Color(0xffff2525), "audio/10.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/11.mp3"),
+              Pad(Color(0xffA23AB7), Color(0xffE246FC), "audio/12.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/13.mp3"),
+              Pad(Color(0xffc40050), Color(0xffff2525), "audio/14.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/15.mp3"),
+              Pad(Color(0xffA23AB7), Color(0xffE246FC), "audio/16.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/17.mp3"),
+              Pad(Color(0xffc40050), Color(0xffff2525), "audio/18.mp3"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/19.mp3"),
+              Pad(Color(0xffA23AB7), Color(0xffE246FC), "audio/20.wav"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/21.mp3"),
+              Pad(Color(0xffc40050), Color(0xffff2525), "audio/22.wav"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/23.wav"),
+              Pad(Color(0xffA23AB7), Color(0xffE246FC), "audio/24.wav"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/25.wav"),
+              Pad(Color(0xffc40050), Color(0xffff2525), "audio/26.wav"),
+              Pad(Color(0xff067CCB), Color(0xffADCBFC), "audio/27.wav"),
+              Pad(Color(0xffA23AB7), Color(0xffE246FC), "audio/28.wav"),
             ],
           ),
-        ),
+        )
       )
+    );
+  }
+}
+
+class Pad extends StatefulWidget {
+  final Color outColor;
+  final Color inColor;
+  final String audio;
+  const Pad(this.outColor, this.inColor, this.audio, {super.key});
+  @override
+  State<Pad> createState() => _Pad();
+}
+
+class _Pad extends State<Pad> {
+  late Color _outColor;
+  late Color _inColor;
+  final AudioPlayer player = AudioPlayer();
+
+  @override
+  void initState() {
+    super.initState();
+    _outColor = widget.outColor;
+    _inColor = widget.inColor;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    return GestureDetector(
+      onTap: () async {
+        setState(() {
+          _outColor = Colors.white;
+          _inColor = Colors.white;
+          player.play(AssetSource(widget.audio));
+        });
+        await Future.delayed(Duration(milliseconds: 50));
+
+        setState(() {
+          _outColor = widget.outColor;
+          _inColor = widget.inColor;
+        });
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(colors: [_inColor, _outColor]),
+          borderRadius: BorderRadius.circular(10.0),
+          boxShadow: [BoxShadow(color: Colors.black, blurRadius: 1.0)]
+        ),
+        height: height/8.0,
+        width: width/4.1,
+      ),
     );
   }
 }
