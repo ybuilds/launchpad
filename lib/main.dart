@@ -99,7 +99,7 @@ class _Pad extends State<Pad> {
       child: Container(
         decoration: BoxDecoration(
           gradient: RadialGradient(colors: [_inColor, _outColor]),
-          borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(7.5),
           boxShadow: [BoxShadow(color: Colors.black, blurRadius: 1.0)]
         ),
         height: height/8.0,
